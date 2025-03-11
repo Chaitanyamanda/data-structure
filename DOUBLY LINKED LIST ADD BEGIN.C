@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include<stdlib.h>
 struct node{
@@ -31,17 +32,19 @@ int main(){
   d3->next=NULL;
   
   struct node*head=d1;
+  struct node*s1=malloc(sizeof(struct node));
+  s1->data=40;
+  
+  
    
-   struct node*s1=malloc(sizeof(struct node));
-   s1->data=40;
-   s1->next=NULL;
-   s1->prev=NULL;
+      s1->next=head;
+      head->prev=s1;
+      head=s1;
      
-     s1->next=head;
-     head->prev=s1;
-     head=s1;
-   while(head!=NULL){
-     printf("%d->",head->data);
-     head=head->next;
-   }
+     struct node*temp=head;
+     while(temp!=NULL){
+       printf("%d <->",temp->data);
+       temp=temp->next;
+     }
+ 
 }
