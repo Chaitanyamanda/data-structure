@@ -42,7 +42,7 @@ int main()
       root->left->left=c1;
       root->left->right=c2;
       root->right->right=c3;
-      root->left->right->right=gc1;
+      root->left->right->left=gc1;
       root->right->right->left=gc2;
       root->right->right->left->right=gc3;
       root->right->right->left->right->left=gc4;
@@ -55,7 +55,7 @@ int main()
       printf("%d ", root->left->left->data);
       printf("%d ", root->left->right->data);
       printf("%d ", root->right->right->data);
-      printf("%d ", root->left->right->right->data);
+      printf("%d ", root->left->right->left->data);
       printf("%d ", root->right->right->left->data);
       printf("%d ", root->right->right->left->right->data);
       printf("%d ", root->right->right->left->right->left->data);
